@@ -1,0 +1,13 @@
+更新日志：
+2017-08-15
+1、ringboot基本框架搭建;
+2、添加swagger文档生成工具;
+3、添加热部署工具;   【还有点问题】
+4、更换日志框架logback为log4j2; 【有问题】
+5、更换Json处理框架为fastJson;
+6、添加定时任务类SchedulingConfig;
+
+2017-08-16
+7、整合mybatis+druid+pageHelper框架;
+8、设置druid数据监控;
+9、添加系统请求日志切片;

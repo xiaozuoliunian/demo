@@ -1,4 +1,4 @@
-package com.veuve.mydemo.util.quartz;
+package com.veuve.mydemo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;

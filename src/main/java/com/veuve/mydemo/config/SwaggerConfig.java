@@ -1,4 +1,4 @@
-package com.veuve.mydemo;
+package com.veuve.mydemo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

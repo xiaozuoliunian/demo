@@ -1,11 +1,20 @@
-package com.veuve.mydemo.web;
+package com.veuve.mydemo.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.veuve.mydemo.base.exception.MyException;
 import com.veuve.mydemo.domain.User;
+import com.veuve.mydemo.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by chen on 2017-08-15.
@@ -13,6 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Api(value = "Hello",description = "HelloController API")
 public class HelloController {
+
+    private Logger logger =  LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    public UserService UserService;
+
 
     @RequestMapping("/hello")
     @ApiOperation(value = "springboot测试demo",notes = "springboot测试demo")
@@ -22,13 +37,10 @@ public class HelloController {
 
     @RequestMapping("/getUserInfo")
     @ApiOperation(value = "获取用户信息",notes = "获取用户信息")
-    public User getUserInfo(){
-        User user = new User();
-        user.setId("1");
-        user.setName("张三");
-        user.setAge("160");
-        user.setAddress("重庆市北碚区");
-        return user;
+    public Map getUserInfo(){
+        logger.info("---------------------------------获取用户信息-----------------------");
+        HashMap<String, Object> map = UserService.queryUser();
+        return map;
     }
 
     @RequestMapping("/json")

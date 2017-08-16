@@ -6,9 +6,11 @@ package com.veuve.mydemo.domain;
 public class User {
 
     private String id;
-    private String name;
-    private String age;
-    private String address;
+    private String username;
+    private String password;
+    private String trueName;
+    private String cardId;
+    private String createDate;
 
     public String getId() {
         return id;
@@ -18,27 +20,43 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getAge() {
-        return age;
+    public String getPassword() {
+        return password;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getAddress() {
-        return address;
+    public String getTrueName() {
+        return trueName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setTrueName(String trueName) {
+        this.trueName = trueName;
+    }
+
+    public String getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
     }
 }
